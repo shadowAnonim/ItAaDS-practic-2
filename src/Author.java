@@ -1,10 +1,18 @@
 public class Author {
+    private String name;
+    private String email;
+    private char gender;
+
+    public Author(String name, String email, char gender)
+    {
+        this.name = name;
+        this.email = email;
+        this.gender = gender;
+    }
 
     public String getName() {
         return name;
     }
-
-    private String name;
 
     public String getEmail() {
         return email;
@@ -14,21 +22,12 @@ public class Author {
         this.email = email;
     }
 
-    private  String email;
-
     public char getGender() {
         return gender;
     }
 
-    private char gender;
-
-    public Author(String name, String email, char gender)
-    {
-
-    }
-
     @Override
     public String toString() {
-        return String.join(",", name, email, Character.toString(gender));
+        return String.join(", ", name, email, Character.toString(gender));
     }
 }
